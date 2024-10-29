@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let totalVentas = 0;
+let productosVendidos = [];
+let continuarVenta = true;
+
+while (continuarVenta) {
+    const nombreProducto = prompt("Ingresa el nombre del producto:");
+    const precio = parseFloat(prompt("Ingresa el precio del producto:"));
+    const cantidad = parseInt(prompt("Ingresa la cantidad vendida:"));
+
+    if (!isNaN(precio) && !isNaN(cantidad)) {
+        const venta = precio * cantidad;
+        totalVentas += venta;
+        productosVendidos.push({ nombre: nombreProducto, cantidad, venta });
+    } else {
+        console.log("Por favor, ingresa datos válidos.");
+    }
+
+    continuarVenta = confirm("¿Deseas registrar otra venta?");
+}
+
+console.log("Productos vendidos:");
+productosVendidos.forEach((producto) => {
+    console.log(`${producto.cantidad} x ${producto.nombre} - Total: $${producto.venta}`);
+});
+console.log(`Total de ventas: $${totalVentas}`);
+
+    </script>
+    
+</body>
+</html>

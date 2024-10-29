@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let saldo = 1000;
+
+        while (true) {
+            const montoRetiro = parseFloat(prompt("Ingresa el monto a retirar:"));
+        
+            if (montoRetiro > saldo) {
+                console.log("Error: El monto excede el saldo disponible.");
+            } else {
+                saldo -= montoRetiro;
+                console.log(`Retiro exitoso. Saldo restante: $${saldo}`);
+            }
+        
+            if (!confirm("¿Deseas realizar otro retiro?")) break;
+        }
+        </script>
+    
+</body>
+</html>

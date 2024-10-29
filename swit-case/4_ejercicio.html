@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const tipoProducto = prompt("Ingrese el tipo de producto (A: Alimentos, V: Vestimenta, E: Electrónicos):").toUpperCase();
+const cantidad = parseInt(prompt("Ingrese la cantidad de unidades:"));
+
+if (cantidad > 0) {
+    let precioBase, descuento;
+
+    switch (tipoProducto) {
+        case 'A':
+            precioBase = 100;
+            descuento = 0.10;
+            break;
+        case 'V':
+            precioBase = 200;
+            descuento = 0.05;
+            break;
+        case 'E':
+            precioBase = 500;
+            descuento = 0;
+            break;
+        default:
+            console.log("Tipo de producto no válido.");
+            return;
+    }
+
+    const costoSinDescuento = precioBase * cantidad;
+    const costoConDescuento = costoSinDescuento * (1 - descuento);
+
+    console.log(`Costo sin descuento: $${costoSinDescuento}`);
+    console.log(`Costo con descuento: $${costoConDescuento}`);
+} else {
+    console.log("Cantidad de unidades no válida.");
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const edadUsuario = parseInt(prompt("Ingrese su edad:"));
+
+switch (true) {
+    case (edadUsuario < 7):
+        console.log("Recomendamos películas animadas y educativas.");
+        break;
+    case (edadUsuario >= 7 && edadUsuario <= 17):
+        console.log("Recomendamos películas de animación, aventura y comedia familiar.");
+        break;
+    case (edadUsuario >= 18 && edadUsuario <= 30):
+        console.log("Recomendamos acción, drama, comedia y ciencia ficción.");
+        break;
+    case (edadUsuario > 30):
+        console.log("Recomendamos películas clásicas y dramas.");
+        break;
+    default:
+        console.log("Edad no válida.");
+}
+
+    </script>
+    
+</body>
+</html>

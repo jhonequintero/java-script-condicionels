@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const costoTotal = parseFloat(prompt("Ingrese el costo total de su pedido:"));
+const metodoPago = prompt("Ingrese el método de pago (efectivo, tarjeta, cheque):").toLowerCase();
+let descuento = 0;
+
+switch (metodoPago) {
+    case "efectivo":
+        descuento = 0.10;
+        break;
+    case "tarjeta":
+        descuento = 0.05;
+        break;
+    case "cheque":
+        descuento = 0.03;
+        break;
+    default:
+        console.log("Método de pago no válido.");
+}
+
+const costoFinal = costoTotal * (1 - descuento);
+console.log(`Costo final después del descuento: $${costoFinal}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function moverAscensorConPeso(pesoUsuario, pisoDeseado) {
+            const limitePeso = 500; 
+            const pisoMinimo = 1;
+            const pisoMaximo = 10;
+        
+            if (pesoUsuario <= limitePeso) {
+                if (pisoDeseado >= pisoMinimo && pisoDeseado <= pisoMaximo) {
+                    console.log(`Moviendo el ascensor al piso ${pisoDeseado}...`);
+                } else {
+                    console.log("Error: Piso no válido. Intenta con un número entre 1 y 10.");
+                }
+            } else {
+                console.log("Error: El ascensor está sobrecargado. Peso excede el límite.");
+            }
+        }
+        
+   
+        const peso = parseFloat(prompt("Ingresa tu peso (kg):"));
+        const pisoDestino = parseInt(prompt("¿A qué piso deseas ir?"));
+        moverAscensorConPeso(peso, pisoDestino);
+        
+    </script>
+    
+</body>
+</html>

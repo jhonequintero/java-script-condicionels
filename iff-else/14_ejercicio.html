@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function verificarTemperatura(temperaturaActual) {
+            const temperaturaMinima = 18;
+            const temperaturaMaxima = 25;
+        
+            if (temperaturaActual >= temperaturaMinima && temperaturaActual <= temperaturaMaxima) {
+                console.log("La temperatura es adecuada.");
+            } else {
+                console.log("La temperatura está fuera del rango deseado.");
+            }
+        }
+        
+       
+        const temperatura = parseFloat(prompt("Ingresa la temperatura actual (°C):"));
+        verificarTemperatura(temperatura);
+        
+    </script>
+    
+</body>
+</html>

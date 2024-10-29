@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        let adivinanza;
+        
+        while (adivinanza !== numeroSecreto) {
+            adivinanza = parseInt(prompt("Adivina el número (entre 1 y 100):"));
+        
+            if (adivinanza < numeroSecreto) {
+                console.log("El número es mayor.");
+            } else if (adivinanza > numeroSecreto) {
+                console.log("El número es menor.");
+            } else {
+                console.log("¡Felicidades! Has adivinado el número.");
+            }
+        }
+        </script>
+    
+</body>
+</html>

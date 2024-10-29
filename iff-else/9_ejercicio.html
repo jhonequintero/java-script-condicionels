@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let descuento=0
+        let monto_final=0
+
+        let total_compra=parseFloat(prompt("ingrese el total de su compra "));
+        if (total_compra >=1000){
+            descuento=(total_compra*0.10);
+            monto_final=(total_compra-descuento);
+            console.log("tu descuento en tu compra  fue de un 10%  q es de " + descuento );
+            console.log("tu monto final de tu comprar es de " + monto_final );
+
+        }else if (total_compra<= 500 && total_compra<1000){
+            descuento=(total_compra*0.05);
+            monto_final=(descuento-total_compra);
+            console.log("tu descuento en tu compra  fue de un 5%  q es de " + descuento );
+            console.log("tu monto final de tu comprar es de " + monto_final );
+        }else if (total_compra<500){
+            console.log("no obtiene descuentos ");
+            console.log("tu monto final de tu comprar es de " + total_compra );
+        }else{
+            console.log("invalido ingresar valores validos");
+        }
+
+    </script>
+    
+</body>
+</html>

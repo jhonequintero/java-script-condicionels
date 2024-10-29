@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function verificarTemperaturaConAlerta(temperaturaActual, umbralAlerta) {
+            if (temperaturaActual > umbralAlerta) {
+                console.log("Alerta: La temperatura está por encima del umbral de alerta.");
+            } else {
+                console.log("La temperatura es normal.");
+            }
+        }
+        
+        const temperatura = parseFloat(prompt("Ingresa la temperatura actual (°C):"));
+        const umbralAlerta = 30; 
+        verificarTemperaturaConAlerta(temperatura, umbralAlerta);
+        
+    </script>t
+    
+</body>
+</html>

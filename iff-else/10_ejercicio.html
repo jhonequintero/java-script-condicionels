@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        var descuento=0;
+        var monto_final=0
+        var prec_producto=parseInt(prompt("ingrese el precio del producto "));
+        var cant_comprada=parseInt(prompt("ingrese la cantidad comprada del producto que quieres llevar "));
+        
+        var total_compra=(prec_producto*cant_comprada);
+        if (cant_comprada>=10 ){
+            descuento=(total_compra*0.10);
+            monto_final=(total_compra-descuento);
+            console.log("tu descuento en tu compra  fue de un 10%  q es de " + descuento );
+            console.log("el total de tu compra fue de " + monto_final + " dolares ");
+        }else if( cant_comprada>=5 && cant_comprada < 10){
+            descuento=(total_compra*0.05);
+            monto_final=(total_compra-descuento);
+            console.log("tu descuento en tu compra  fue de un 5%  q es de " + descuento );
+            console.log("el total de tu compra fue de " + monto_final + " dolares ");
+        }else if (cant_comprada < 5 ){
+            console.log("no obtienes descuento");
+            console.log("el total de tu compra fue de " + total_compra + " dolares ");
+        }else{
+            console.log("no obtienes descuento");
+            console.log("error , ingresar un valor valido ");
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>

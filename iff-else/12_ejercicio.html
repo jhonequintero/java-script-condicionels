@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function moverAscensor(pisoDeseado) {
+            const pisoMinimo = 1;
+            const pisoMaximo = 10;
+        
+            if (pisoDeseado >= pisoMinimo && pisoDeseado <= pisoMaximo) {
+                console.log(`Moviendo el ascensor al piso ${pisoDeseado}...`);
+            } else {
+                console.log("Error: Piso no válido. Intenta con un número entre 1 y 10.");
+            }
+        }
+        
+        const piso = parseInt(prompt("¿A qué piso deseas ir?"));
+        moverAscensor(piso);
+        
+    </script>
+    
+</body>
+</html>

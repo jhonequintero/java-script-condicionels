@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let tareas = "";
+        let continuar;
+        
+        do {
+            const descripcion = prompt("Ingresa la descripción de la tarea:");
+            const fechaVencimiento = prompt("Ingresa la fecha de vencimiento de la tarea:");
+            
+            tareas += `Tarea: ${descripcion}, Fecha de Vencimiento: ${fechaVencimiento}\n`;
+            continuar = confirm("¿Deseas agregar otra tarea?");
+        } while (continuar);
+        
+        console.log("Lista de tareas registradas:\n" + tareas);
+        </script>
+</body>
+</html>

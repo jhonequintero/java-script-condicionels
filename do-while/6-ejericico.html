@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let sumaNotas = 0;
+        let contadorNotas = 0;
+        let continuar;
+        
+        do {
+            const nota = parseFloat(prompt("Ingresa el resultado del examen:"));
+            sumaNotas += nota;
+            contadorNotas++;
+            continuar = confirm("¿Deseas ingresar otro resultado?");
+        } while (continuar);
+        
+        const promedio = sumaNotas / contadorNotas;
+        console.log(`Promedio de los resultados: ${promedio}`);
+        console.log(promedio >= 3 ? "Has aprobado." : "Has reprobado.");
+        </script>
+    
+</body>
+</html>

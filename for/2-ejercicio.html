@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sumatoria = 0;
+        let cantidadNumeros = 0;
+        
+        let numero = parseInt(prompt("¿Cuántos números quieres ingresar?"));
+        
+        for (let i = 0; i < numero; i++) {
+            let entrada = parseInt(prompt("Ingrese el número " + (i + 1) + ":"));
+            
+            sumatoria += entrada;
+            cantidadNumeros++;
+        }
+        
+        let promedio = sumatoria / cantidadNumeros;
+        console.log("Sumatoria:", sumatoria);
+        console.log("Promedio:", promedio);
+        
+
+
+    </script>
+    
+
+
+
+    
+</body>
+</html>

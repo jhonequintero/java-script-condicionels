@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const peso = parseFloat(prompt("Ingrese su peso en kg:"));
+const altura = parseFloat(prompt("Ingrese su altura en metros:"));
+const imc = peso / (altura ** 2);
+
+switch (true) {
+    case (imc < 18.5):
+        console.log("IMC: Bajo peso");
+        break;
+    case (imc < 24.9):
+        console.log("IMC: Peso normal");
+        break;
+    case (imc < 29.9):
+        console.log("IMC: Sobrepeso");
+        break;
+    default:
+        console.log("IMC: Obesidad");
+}
+
+    </script>
+    
+</body>
+</html>

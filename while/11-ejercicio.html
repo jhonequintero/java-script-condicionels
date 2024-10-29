@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>while (true) {
+        const distancia = parseFloat(prompt("Ingresa la distancia del viaje (en km):"));
+        const velocidad = parseFloat(prompt("Ingresa la velocidad promedio del coche (en km/h):"));
+        const tiempo = distancia / velocidad;
+    
+        console.log(`El tiempo estimado de viaje es: ${tiempo.toFixed(2)} horas`);
+    
+        if (!confirm("¿Deseas simular otro viaje?")) break;
+    }
+    </script>
+    
+</body>
+</html>

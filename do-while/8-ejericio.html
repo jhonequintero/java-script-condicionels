@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let totalVentas = 0;
+        let ventas = "";
+        let continuar;
+        
+        do {
+            const producto = prompt("Ingresa el nombre del producto vendido:");
+            const precio = parseFloat(prompt("Ingresa el precio del producto:"));
+            
+            ventas += `Producto: ${producto}, Precio: $${precio}\n`;
+            totalVentas += precio;
+            continuar = confirm("¿Deseas registrar otra venta?");
+        } while (continuar);
+        
+        console.log("Registro de ventas:\n" + ventas);
+        console.log(`Monto total de ventas: $${totalVentas}`);
+        </script>
+</body>
+</html>

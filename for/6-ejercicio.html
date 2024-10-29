@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let suma = 0;
+let continuar = true;
+
+while (continuar) {
+    const numero = prompt("Ingresa un número (o escribe 'fin' para terminar):");
+
+    if (numero.toLowerCase() === 'fin') {
+        continuar = false;
+    } else if (!isNaN(numero)) {
+        suma += parseFloat(numero);
+    } else {
+        console.log("Por favor, ingresa un número válido.");
+    }
+}
+
+console.log(`La suma total de los números ingresados es: ${suma}`);
+
+    </script>
+</body>
+</html>

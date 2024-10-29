@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let temperatura;
+
+        do {
+            temperatura = parseFloat(prompt("Ingresa la temperatura actual:"));
+            if (temperatura < 18 || temperatura > 25) {
+                console.log("Alerta: La temperatura está fuera del rango aceptable (18°C - 25°C).");
+            }
+        } while (temperatura < 18 || temperatura > 25);
+        
+        console.log("La temperatura está dentro del rango aceptable.");
+        </script>
+</body>
+</html>

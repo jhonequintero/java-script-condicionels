@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let papelDisponible = 50;
+
+        while (papelDisponible > 0) {
+            const paginas = parseInt(prompt("Ingresa la cantidad de páginas a imprimir:"));
+        
+            if (paginas > papelDisponible) {
+                console.log("Error: No hay suficiente papel.");
+            } else {
+                papelDisponible -= paginas;
+                console.log(`Se han impreso ${paginas} página(s). Papel restante: ${papelDisponible}`);
+            }
+        
+            if (!confirm("¿Deseas imprimir más páginas?") || papelDisponible === 0) break;
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function moverAscensorConTemperatura(pisoDeseado, temperaturaActual) {
+            const pisoMinimo = 1;
+            const pisoMaximo = 10;
+            const temperaturaMinima = 18;
+            const temperaturaMaxima = 25;
+        
+            if (temperaturaActual >= temperaturaMinima && temperaturaActual <= temperaturaMaxima) {
+                if (pisoDeseado >= pisoMinimo && pisoDeseado <= pisoMaximo) {
+                    console.log(`Moviendo el ascensor al piso ${pisoDeseado}...`);
+                } else {
+                    console.log("Error: Piso no válido. Intenta con un número entre 1 y 10.");
+                }
+            } else {
+                console.log("La temperatura no es adecuada para el funcionamiento del ascensor.");
+            }
+        }
+        
+    
+        const piso = parseInt(prompt("¿A qué piso deseas ir?"));
+        const temperaturaAmbiente = parseFloat(prompt("Ingresa la temperatura ambiente actual (°C):"));
+        moverAscensorConTemperatura(piso, temperaturaAmbiente);
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let suma = 0;
+        let numero;
+        
+        do {
+            numero = parseInt(prompt("Ingresa un número positivo (o un número negativo para terminar):"));
+            if (numero >= 0) {
+                suma += numero;
+            }
+        } while (numero >= 0);
+        
+        console.log(`La suma de los números ingresados es: ${suma}`);
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let totalCompra = 0;
+        let carrito = [];
+        let continuarCompra = true;
+        
+        while (continuarCompra) {
+            const nombreProducto = prompt("Ingresa el nombre del producto:");
+            const precio = parseFloat(prompt("Ingresa el precio del producto:"));
+        
+            if (!isNaN(precio)) {
+                totalCompra += precio;
+                carrito.push(nombreProducto);
+            } else {
+                console.log("Por favor, ingresa un precio válido.");
+            }
+        
+            continuarCompra = confirm("¿Deseas agregar otro producto?");
+        }
+        
+        console.log("Productos en el carrito:");
+        carrito.forEach((producto) => console.log(`- ${producto}`));
+        console.log(`Total de la compra: $${totalCompra}`);
+        </script>
+    
+</body>
+</html>

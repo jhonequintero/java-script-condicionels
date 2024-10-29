@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vector=[];
+
+        do{
+        nombre=prompt("ingrese el nombre del cliente: ");
+        producto=prompt("ingrese el nombre del producto");
+        cantidad=parseInt(prompt("ingrese la cantidad de productos que deseas llevar"));
+        precio=parseInt(prompt("ingrese el precio del producto"));
+        vector.push(nombre,producto,cantidad,precio);
+        subtotal=(cantidad*precio);
+        none= prompt("que tipo de clientes eres  (estudiante o ) ");
+        if (none=="estudiante"){
+            descuento=(subtotal*0.05);
+            console.log("que bueno eres estudiante , obtienes un 5% de impuesto que es de " + descuento);
+        }else {
+            descuento=(subtotal*0.13);
+            console.log("obtienes un 13% de impuesto por noser estudiante que es de " + descuento);
+
+        }
+
+        
+        opcion = parseInt(prompt("deseas agragar mas SI=(0) si no deseas NO(1) "));
+        if (opcion==1){
+            console.log("saliendo del programa....");
+            break
+        
+        }else(opcion==0)
+            {console.log("ohhh que bueno deseaste guardar mas libros "); }
+            break
+
+        }while (opcion==1);
+        total= ( subtotal+descuento);
+        console.log("el total es de " + total);
+        console.log("la factura es......")
+        console.log("nombre : " + nombre + " producto: " + producto + " cantidad: " + cantidad + " precio " + precio)
+       
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let libros = "";
+        let continuar;
+        
+        do {
+            const titulo = prompt("Ingresa el título del libro:");
+            const autor = prompt("Ingresa el autor del libro:");
+            const paginas = prompt("Ingresa el número de páginas:");
+            
+            libros += `Título: ${titulo}, Autor: ${autor}, Páginas: ${paginas}\n`;
+            continuar = confirm("¿Deseas registrar otro libro?");
+        } while (continuar);
+        
+        console.log("Libros registrados:\n" + libros);
+        </script>
+</body>
+</html>

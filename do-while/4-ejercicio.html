@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let total = 0;
+        let continuar;
+        
+        do {
+            const opcion = parseInt(prompt("Menú de comidas rápidas:\n1. Hamburguesa - $5\n2. Pizza - $8\n3. Hot Dog - $3\n4. Finalizar pedido"));
+        
+            switch (opcion) {
+                case 1:
+                    total += 5;
+                    console.log("Has agregado una hamburguesa al pedido.");
+                    break;
+                case 2:
+                    total += 8;
+                    console.log("Has agregado una pizza al pedido.");
+                    break;
+                case 3:
+                    total += 3;
+                    console.log("Has agregado un hot dog al pedido.");
+                    break;
+                case 4:
+                    continuar = false;
+                    console.log("Pedido finalizado.");
+                    break;
+                default:
+                    console.log("Opción no válida.");
+            }
+            
+            if (opcion !== 4) {
+                continuar = confirm("¿Deseas agregar otra comida?");
+            }
+        } while (continuar);
+        
+        console.log(`El costo total de tu pedido es: $${total}. ¡Gracias por tu compra!`);
+        </script>
+</body>
+</html>

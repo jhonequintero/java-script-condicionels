@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let contactos = [];
+        let continuarRegistro = true;
+        
+        while (continuarRegistro) {
+            const nombre = prompt("Ingresa el nombre del contacto:");
+            const telefono = prompt("Ingresa el número de teléfono:");
+        
+            contactos.push({ nombre, telefono });
+            continuarRegistro = confirm("¿Deseas agregar otro contacto?");
+        }
+        
+        console.log("Lista de contactos:");
+        contactos.forEach((contacto) => {
+            console.log(`Nombre: ${contacto.nombre}, Teléfono: ${contacto.telefono}`);
+        });
+        </script>
+</body>
+</html>
